@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Cat.destroy_all
 d1 = DateTime.new(2013, 6, 22)
+d2 = DateTime.new(2015, 8, 10)
+d3 = DateTime.new(2014, 9, 13)
 cat1 = Cat.create!(name: 'Teddy', birth_date: d1, color: 'black', sex: 'M', description: 'A fluffy little cat')
-cat2 = Cat.create!(name: 'Cyndi', birth_date: d1, color: 'brown', sex: 'F', description: 'A small cute cat')
-cat3 = Cat.create!(name: 'Pishi', birth_date: d1, color: 'white', sex: 'M', description: 'A grumpy cat')
+cat2 = Cat.create!(name: 'Cyndi', birth_date: d2, color: 'brown', sex: 'F', description: 'A small cute cat')
+cat3 = Cat.create!(name: 'Pishi', birth_date: d3, color: 'white', sex: 'M', description: 'A grumpy cat')
