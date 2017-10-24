@@ -14,7 +14,14 @@
 
 class Cat < ApplicationRecord
 
-	CAT_COLORS = %w(black white brown)
+	CAT_COLORS = %w(black white brown).freeze
+# def choose_color
+# 	one_color = []
+# 	CAT_COLORS.each do |color|
+# 		one_color << color unless one_color.include?(color)
+# 	end
+# 	one_color
+# end
 
 	validates :color, inclusion: CAT_COLORS
 	validates :sex, inclusion: %w(M F)
@@ -22,7 +29,7 @@ class Cat < ApplicationRecord
 
 	def age
 		# now = Date.today
-		# (self.birth_date.year) - now.year 
+		# (self.birth_date.year) - now.year
 		time_ago_in_words(birth_date)
 	end
 end

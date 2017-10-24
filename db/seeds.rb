@@ -12,3 +12,12 @@ d3 = DateTime.new(2014, 9, 13)
 cat1 = Cat.create!(name: 'Teddy', birth_date: d1, color: 'black', sex: 'M', description: 'A fluffy little cat')
 cat2 = Cat.create!(name: 'Cyndi', birth_date: d2, color: 'brown', sex: 'F', description: 'A small cute cat')
 cat3 = Cat.create!(name: 'Pishi', birth_date: d3, color: 'white', sex: 'M', description: 'A grumpy cat')
+
+
+<% Cat::CAT_COLORS.each do |color| %>
+    <option
+      <%= cat.color == color ? "selected" : "" %>
+      value="<%= color %>">
+      <%= color.upcase %>
+    </option>
+  <% end %>
