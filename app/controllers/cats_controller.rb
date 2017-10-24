@@ -10,7 +10,7 @@ class CatsController < ApplicationController
 		if @cat
 			render :show
 		else
-			render :index
+			redirect_to cats_url
 		end
 	end
 end
