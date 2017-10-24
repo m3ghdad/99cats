@@ -5,8 +5,8 @@ class CreateCatsTable < ActiveRecord::Migration[5.1]
     	t.string :color, null: false
     	t.string :name, null: false
     	t.string :sex, null: false, limit: 1
-    	t.text :description, null: false
-    	
+    	t.text :description
+
     	t.timestamps
     end
   end
