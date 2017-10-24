@@ -21,10 +21,11 @@ class CatsController < ApplicationController
 
 	def create
 		@cat = Cat.new(cat_params)
+
 		if @cat.save
-			render :new
+			redirect_to cat_url(@cat)
 		else
-			#ERROR
+			render :new
 		end
 
 	end
