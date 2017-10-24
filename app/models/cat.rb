@@ -27,6 +27,11 @@ class Cat < ApplicationRecord
 	validates :sex, inclusion: %w(M F)
 	validates :birth_date, :color, :name, :sex, :description, presence: true
 
+	has_many :rental_requests,
+		primary_key: :id,
+		foreign_key: :cat_id,
+		class_name: 'CatRentalRequest'
+
 	def age
 		# now = Date.today
 		# (self.birth_date.year) - now.year
